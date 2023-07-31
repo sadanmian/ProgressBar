@@ -6,7 +6,7 @@ const fakeUploadPerc = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
 const interval = setInterval(() => {
   progress.style.width = `${fakeUploadPerc[i]}%`;
-  loading.innerHTML = `${fakeUploadPerc[i]} %`;
+  loading.innerHTML = `${fakeUploadPerc[i]}%`;
   i++;
   if (i > fakeUploadPerc.length) {
     clearInterval(interval);
