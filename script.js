@@ -2,7 +2,10 @@ const progress = document.querySelector(".progress");
 const loading = document.querySelector(".loading");
 
 let i = 0;
-const fakeUploadPerc = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+const fakeUploadPerc = [];
+for (let j = 0; j <= 100; j++) {
+  fakeUploadPerc.push(j);
+}
 
 const interval = setInterval(() => {
   progress.style.width = `${fakeUploadPerc[i]}%`;
@@ -12,4 +15,4 @@ const interval = setInterval(() => {
     clearInterval(interval);
     loading.innerHTML = "Completed";
   }
-}, 1000);
+}, 100);
